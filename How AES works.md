@@ -19,8 +19,19 @@ Các bước để mã hóa và giải mã dữ liệu bằng AES là như sau:
 
   + Trả về khối dữ liệu đã mã hóa: Khối dữ liệu được mã hóa cuối cùng trả về để được lưu trữ hoặc truyền đi.
 
-- Giải mã dữ liệu: Giải mã được thực hiện bằng cách sử dụng cùng một thuật toán mã hóa, nhưng với các khóa con được sử dụng theo thứ tự ngược lại. Các vòng giải mã bao gồm các bước ngược lại so với các vòng mã hóa.
+- Giải mã dữ liệu: Giải mã được thực hiện bằng cách sử dụng cùng một thuật toán mã hóa, nhưng với các khóa con được sử dụng theo thứ tự ngược lại. Các vòng giải mã bao gồm các bước ngược lại so với các vòng mã hóa.  
+## Một cách tổng quát ta có:  
+-   Addition of the first round key  
+    n-1 Rounds (tùy thuộc độ dài của khóa là bao nhiêu):
+    -   Substitute Bytes
+    -   Shift Rows
+    -   Mix Columns
+    -   Adding the Round Key
+-   The final round
+    -   Substitute Bytes
+    -   Shift Rows
+    -   Adding the Round Key
 
 Vì AES là một thuật toán đối xứng, nên việc mã hóa và giải mã dữ liệu được thực hiện bằng cách sử dụng cùng một khóa. Điều này giúp đảm bảo tính bảo mật và hiệu quả trong việc bảo vệ dữ liệu.
-
+### Tham khảo chi tiết tại các nguồn sau [I](https://www.youtube.com/watch?v=DUSmxMyHF-g&t=1176s) và [II](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 
